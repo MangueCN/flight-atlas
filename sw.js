@@ -1,6 +1,6 @@
 // Flight Atlas service worker
 // VERSION 由发布脚本自动替换,每次发布强制刷新应用外壳
-const VERSION = '__BUILD__';
+const VERSION = '20260710134629';
 const SHELL = `atlas-shell-${VERSION}`;
 const RUNTIME = 'atlas-runtime-v1';
 const TILE_LIMIT = 600;   // 地图瓦片缓存上限
