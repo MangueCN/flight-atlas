@@ -982,5 +982,29 @@
   "photographer": "Z Song",
   "link": "https://www.planespotters.net/photo/1922340/b-220d-china-eastern-airlines-boeing-787-9-dreamliner?utm_source=api",
   "source": "planespotters"
+ },
+ "B-HLS": {
+  "file": "B-HLS.jpg",
+  "photographer": "ZSSSAvi.H",
+  "link": "https://www.planespotters.net/photo/1997045/b-hls-cathay-pacific-airbus-a330-343?utm_source=api",
+  "source": "planespotters"
+ },
+ "B-HLW": {
+  "file": "B-HLW.jpg",
+  "photographer": "Jay Huang",
+  "link": "https://www.planespotters.net/photo/1962898/b-hlw-cathay-pacific-airbus-a330-343?utm_source=api",
+  "source": "planespotters"
+ },
+ "B-HPG": {
+  "file": "B-HPG.jpg",
+  "photographer": "AGUIJUN",
+  "link": "https://www.planespotters.net/photo/1882223/b-hpg-cathay-pacific-airbus-a321-251nx?utm_source=api",
+  "source": "planespotters"
+ },
+ "B-HPI": {
+  "file": "B-HPI.jpg",
+  "photographer": "Frederick Lee",
+  "link": "https://www.planespotters.net/photo/1962669/b-hpi-cathay-pacific-airbus-a321-251nx?utm_source=api",
+  "source": "planespotters"
  }
 }
