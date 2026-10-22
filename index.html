@@ -1631,7 +1631,7 @@ main{margin:0 18px 18px;border-radius:10px;min-height:0;background:#132a37;isola
 /* Responsive edition: phones, iPad portrait, iPad landscape, Split View. */
 :root{--safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);--safe-left:env(safe-area-inset-left,0px);--safe-right:env(safe-area-inset-right,0px);--header-height:76px}
 html,body{width:100%;max-width:100%;overscroll-behavior:none}main{min-width:0}header{padding-left:max(24px,var(--safe-left));padding-right:max(24px,var(--safe-right));padding-top:var(--safe-top);height:calc(var(--header-height) + var(--safe-top));min-height:calc(var(--header-height) + var(--safe-top))}
-.sheet-controls,.sheet-hint,.search-close,.record-short{display:none}.tabs{min-height:44px}.tab{display:flex;align-items:center;justify-content:center}.tab-content,.modal-body{-webkit-overflow-scrolling:touch;min-height:0;overscroll-behavior:contain}.side{min-width:0}.side.dragging{transition:none!important;user-select:none}.tab-content[data-view=stats]{display:block}.overview-hero,.recent-overview,.year-overview{min-width:0}
+.sheet-controls,.sheet-hint,.search-close,.record-short{display:none}.tabs{min-height:44px}.tab{display:flex;align-items:center;justify-content:center}.tab-content,.modal-body{-webkit-overflow-scrolling:touch;min-height:0;overscroll-behavior:contain}.side{min-width:0;z-index:700}.side.dragging{transition:none!important;user-select:none}.tab-content[data-view=stats]{display:block}.overview-hero,.recent-overview,.year-overview{min-width:0}
 .head-menu>.menu-btn{letter-spacing:2px}.search-wrap.mobile-open{display:flex;align-items:center;gap:8px;position:fixed;top:calc(var(--header-height) + var(--safe-top) + 4px);left:max(12px,var(--safe-left));right:max(12px,var(--safe-right));width:auto;margin:0;padding:8px;background:#fbfaf7;border:1px solid #d5dfd2;border-radius:9px;box-shadow:var(--shadow-lg)}.search-wrap.mobile-open .search-input{flex:1;min-width:0;padding:12px;font-size:16px;background:#f1f3ed;border:0;box-shadow:none;backdrop-filter:none}.search-wrap.mobile-open .search-close{display:block;flex-shrink:0;min-width:44px;min-height:44px;border:0;border-radius:5px;color:#597367;background:transparent;font-size:13px}.search-wrap.mobile-open .search-pop{top:calc(100% + 6px);left:0;right:0;width:100%;max-height:min(480px,calc(var(--visual-height,100dvh) - var(--header-height) - var(--safe-top) - 95px))}.search-pop .search-item{min-height:48px}.search-pop .si-sub{max-width:34%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .modal-bg{height:var(--visual-height,100dvh);top:var(--visual-top,0px);bottom:auto}.modal{max-height:calc(var(--visual-height,100dvh) - 40px)}.modal-head{flex-shrink:0;gap:12px}.modal-head>div:first-child{min-width:0}.modal-title{overflow-wrap:anywhere}.modal-sub{line-height:1.5}.modal-close{width:44px;height:44px;min-width:44px}.modal-body{overflow-x:hidden;overflow-y:auto}.modal-body>div{min-width:0}.form-actions{position:sticky;bottom:0;background:#fbfaf7;padding-bottom:max(16px,var(--safe-bottom));z-index:30;border-top:1px solid var(--line)}.form-field{min-width:0}.form-field input,.form-field select{min-width:0}.form .form-grid{gap:14px}.btn{min-height:44px}.info-val{overflow-wrap:anywhere}.photo-frame{min-height:160px}.flt-list-row{min-height:56px}.toast{max-width:calc(100vw - 32px);width:max-content;white-space:normal;line-height:1.5;text-align:center;bottom:max(24px,calc(var(--safe-bottom) + 12px))}
 .map-toolbar button{min-height:40px}.map-toolbar{gap:7px}.info-bar[data-filtered=false] .map-filter-status button{display:none}.rp-track{height:28px;margin-top:2px}.rp-btn{min-width:40px;min-height:40px}.rp-btn.small{min-width:36px;min-height:36px}.rp-close{margin-left:auto}.rp-flight{line-height:1.6}.replay-bar{max-width:calc(100% - 24px)}.replay-bar .rp-close{font-size:16px}
@@ -1663,6 +1663,20 @@ html,body{width:100%;max-width:100%;overscroll-behavior:none}main{min-width:0}he
 }
 @media(max-height:520px) and (max-width:950px) and (orientation:landscape){
  :root{--header-height:50px}header{height:calc(50px + var(--safe-top));min-height:calc(50px + var(--safe-top));padding-left:max(16px,var(--safe-left));padding-right:max(16px,var(--safe-right));gap:5px}.brand{min-width:0}.brand-name{font-size:12px}.brand-name small{display:none}.brand-mark{height:28px;width:28px}.head-btn{min-height:40px;height:40px;padding:5px 10px}.head-btn.ach-nav{display:none}.head-btn span{display:inline}.head-btn.primary{min-height:40px;height:40px}.menu-btn{min-height:40px}.journal-top{display:none}main{margin:0 max(8px,var(--safe-right)) max(8px,var(--safe-bottom)) max(8px,var(--safe-left));border-radius:8px}.side{left:12px;right:auto;top:12px;bottom:12px;width:290px;height:auto;max-height:none;border-radius:8px;min-height:0;padding:0;opacity:1}.side.expanded,.side.collapsed{height:auto;top:12px;bottom:12px}.sheet-controls{display:none}.side-heading{display:none}.tabs{padding:0 5px;min-height:44px;gap:0}.tab{flex:1 0 43px;font-size:11px;min-height:44px;padding:10px 0}.tab-content{padding:12px 16px}.side.collapsed .tab-content{visibility:visible;pointer-events:auto}.map-toolbar{left:318px;right:12px;top:12px;gap:5px;max-width:none}.map-toolbar button{min-height:40px;font-size:11px;padding:8px 11px}.map-toolbar .filter-map-btn,.map-toolbar .separator{display:none}.map-heading,.map-note,.info-bar{display:none!important}.leaflet-control-zoom{margin:64px 12px 0!important}.leaflet-control-zoom a{height:32px!important;width:32px!important;line-height:30px!important}.overview-hero,.year-overview,.detail-toggle{display:none!important}.section-label{margin:0 0 6px;font-size:12px}.section-label .text-btn{font-size:10px}.journey-card{padding:10px 0}.journey-point b{font-size:22px}.journey-meta,.journey-foot{font-size:10px}.journey-point small{font-size:11px}.journey-point{width:95px}.replay-bar{left:auto;right:12px;transform:translateY(140%);bottom:12px;width:calc(100% - 330px);max-width:none;padding:10px}.replay-bar.on{transform:translateY(0)}.replaying .side{opacity:1;pointer-events:auto}.rp-row{display:grid;grid-template-columns:36px 34px minmax(0,1fr) 36px;gap:6px}.rp-flight{grid-column:1/-1;grid-row:2;font-size:11px}.rp-close{grid-column:4;grid-row:1}.rp-date{font-size:14px;min-width:0}.rp-btn,.rp-btn.small{min-height:34px;min-width:34px;height:34px;width:34px}.rp-stats{font-size:10px;gap:8px}.modal-bg{padding:0;align-items:stretch}.modal{height:100%;max-height:100%;width:100%;border-radius:0;border:0}.modal-head{padding:8px max(20px,var(--safe-right)) 8px max(20px,var(--safe-left));min-height:58px}.modal-close{height:40px;width:40px}.modal-body{padding-bottom:var(--safe-bottom)}.form-grid,.form-grid.col-3{grid-template-columns:1fr 1fr!important}.form-grid.col-1{grid-template-columns:1fr!important}.route-display{padding:17px}.route-iata{font-size:32px}.search-wrap.mobile-open{top:calc(50px + var(--safe-top) + 4px)}
+}
+/* Keep the journal's grip above map controls, including during a drag. */
+@media (max-width:767px), (min-width:768px) and (max-width:1023px) and (orientation:portrait) {
+ .sheet-controls{height:52px;min-height:52px;touch-action:none;user-select:none;-webkit-user-select:none}
+ .sheet-controls .side-handle{height:100%;min-width:0;overflow:hidden}
+ .side.collapsed{height:98px}
+ .side.expanded~.map-toolbar,.side.expanded~.info-bar{visibility:hidden;pointer-events:none}
+ .tab-content[data-view=stats]>*{flex-shrink:0}
+}
+@media(min-width:768px) and (max-width:1023px) and (orientation:portrait){
+ .sheet-controls{height:56px;min-height:56px}.side.collapsed{height:104px}
+}
+@media(max-height:520px) and (max-width:950px) and (orientation:landscape){
+ .side.collapsed{height:auto}.side.expanded~.map-toolbar{visibility:visible;pointer-events:auto}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
@@ -4245,17 +4259,27 @@ function setSheet(mode,refit=true){
 }
 function toggleSheetExpansion(){setSheet(sheetMode==='expanded'?'half':'expanded');}
 const handle=$('sideHandle');
-handle.addEventListener('click',()=>{if(sheetIgnoreClick){sheetIgnoreClick=false;return;}setSheet(sheetMode==='collapsed'?'half':'collapsed');});
-handle.addEventListener('pointerdown',e=>{
- if(!isCompactAtlas()||e.button>0)return;
- sheetPointer={id:e.pointerId,y:e.clientY,height:_sideEl.getBoundingClientRect().height,mode:sheetMode,moved:false};
- handle.setPointerCapture(e.pointerId);
+const sheetControls=handle.closest('.sheet-controls');
+function sheetDragBounds(){
+ const min=sheetControls.offsetHeight+_sideEl.querySelector('.tabs').offsetHeight;
+ const max=Math.max(min,_sideEl.parentElement.clientHeight-(window.innerWidth>=768?20:12));
+ return {min,max};
+}
+sheetControls.addEventListener('click',e=>{
+ if(e.target.closest('button:not(.side-handle)'))return;
+ if(sheetIgnoreClick){sheetIgnoreClick=false;return;}
+ setSheet(sheetMode==='collapsed'?'half':'collapsed');
 });
-handle.addEventListener('pointermove',e=>{
+sheetControls.addEventListener('pointerdown',e=>{
+ if(!isCompactAtlas()||e.button>0||!e.isPrimary||e.target.closest('button:not(.side-handle)'))return;
+ sheetPointer={id:e.pointerId,y:e.clientY,height:_sideEl.getBoundingClientRect().height,mode:sheetMode,moved:false};
+ sheetControls.setPointerCapture(e.pointerId);
+});
+sheetControls.addEventListener('pointermove',e=>{
  if(!sheetPointer||e.pointerId!==sheetPointer.id)return;
  const delta=sheetPointer.y-e.clientY;if(Math.abs(delta)<6&&!sheetPointer.moved)return;
  sheetPointer.moved=true;_sideEl.classList.add('dragging');_sideEl.classList.remove('collapsed','expanded');
- const parent=_sideEl.parentElement.clientHeight,max=parent-12,min=96;
+ const {min,max}=sheetDragBounds();
  _sideEl.style.setProperty('--sheet-height',Math.max(min,Math.min(max,sheetPointer.height+delta))+'px');
 });
 function finishSheetDrag(e){
@@ -4267,8 +4291,10 @@ function finishSheetDrag(e){
  if(Math.abs(delta)>55){const modes=['collapsed','half','expanded'];mode=modes[Math.max(0,Math.min(2,modes.indexOf(oldMode)+(delta>0?1:-1)))];}
  setSheet(mode);setTimeout(()=>{sheetIgnoreClick=false;},400);
 }
-handle.addEventListener('pointerup',finishSheetDrag);
-handle.addEventListener('pointercancel',()=>{sheetPointer=null;_sideEl.classList.remove('dragging');setSheet(sheetMode,false);});
+sheetControls.addEventListener('pointerup',finishSheetDrag);
+function cancelSheetDrag(){if(!sheetPointer)return;sheetPointer=null;_sideEl.classList.remove('dragging');setSheet(sheetMode,false);}
+sheetControls.addEventListener('pointercancel',cancelSheetDrag);
+sheetControls.addEventListener('lostpointercapture',cancelSheetDrag);
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{if(isCompactAtlas())setSheet(t.dataset.tab==='stats'?'half':'expanded',false);}));
 function closeAtlasSearch(){ $('searchWrap').classList.remove('mobile-open');$('searchPop').classList.remove('on');$('searchInput').blur(); }
 window.closeAtlasSearch=closeAtlasSearch;window.setSheet=setSheet;window.toggleSheetExpansion=toggleSheetExpansion;
