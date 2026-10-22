@@ -1627,16 +1627,43 @@ main{margin:0 18px 18px;border-radius:10px;min-height:0;background:#132a37;isola
 .replay-bar:not(.on){display:none}.replay-bar{left:calc(50% + 180px);width:min(680px,calc(100% - 420px));border-radius:8px;background:#fbfaf7;border-color:#e2e7dd;box-shadow:var(--shadow-lg);backdrop-filter:none}.rp-btn{background:#e9f0e5;box-shadow:none}.rp-btn:hover{color:#1c655f;box-shadow:none}.rp-date{font-weight:500}.rp-close{color:#b65954;background:#f3e8e3}.rp-track-fill{box-shadow:none}
 .leaflet-tooltip.flt-tip{background:#fbfaf7!important;color:#203640!important;border-color:#d4ded3!important;box-shadow:0 8px 24px #10263233!important;backdrop-filter:none}.leaflet-tooltip.flt-tip span{color:#61737b!important}.leaflet-tooltip.flt-tip b{color:#315d4c}.loader{background:#f6f5f1}.loader-dot{width:30px;height:30px;background:#375f51;box-shadow:none}.loader-text{color:#718679;background:none;letter-spacing:3px;font-size:9px}.toast{background:#234b49;color:#fff;box-shadow:var(--shadow-lg);border:0;border-radius:6px}
 .log-tools{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:11px;color:#7c898d}.log-tools select{border:1px solid #dbe3d7;background:#fbfaf7;color:#516e60;border-radius:4px;font-size:10px;padding:5px}
+
+/* Responsive edition: phones, iPad portrait, iPad landscape, Split View. */
+:root{--safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);--safe-left:env(safe-area-inset-left,0px);--safe-right:env(safe-area-inset-right,0px);--header-height:76px}
+html,body{width:100%;max-width:100%;overscroll-behavior:none}main{min-width:0}header{padding-left:max(24px,var(--safe-left));padding-right:max(24px,var(--safe-right));padding-top:var(--safe-top);height:calc(var(--header-height) + var(--safe-top));min-height:calc(var(--header-height) + var(--safe-top))}
+.sheet-controls,.sheet-hint,.search-close,.record-short{display:none}.tabs{min-height:44px}.tab{display:flex;align-items:center;justify-content:center}.tab-content,.modal-body{-webkit-overflow-scrolling:touch;min-height:0;overscroll-behavior:contain}.side{min-width:0}.side.dragging{transition:none!important;user-select:none}.tab-content[data-view=stats]{display:block}.overview-hero,.recent-overview,.year-overview{min-width:0}
+.head-menu>.menu-btn{letter-spacing:2px}.search-wrap.mobile-open{display:flex;align-items:center;gap:8px;position:fixed;top:calc(var(--header-height) + var(--safe-top) + 4px);left:max(12px,var(--safe-left));right:max(12px,var(--safe-right));width:auto;margin:0;padding:8px;background:#fbfaf7;border:1px solid #d5dfd2;border-radius:9px;box-shadow:var(--shadow-lg)}.search-wrap.mobile-open .search-input{flex:1;min-width:0;padding:12px;font-size:16px;background:#f1f3ed;border:0;box-shadow:none;backdrop-filter:none}.search-wrap.mobile-open .search-close{display:block;flex-shrink:0;min-width:44px;min-height:44px;border:0;border-radius:5px;color:#597367;background:transparent;font-size:13px}.search-wrap.mobile-open .search-pop{top:calc(100% + 6px);left:0;right:0;width:100%;max-height:min(480px,calc(var(--visual-height,100dvh) - var(--header-height) - var(--safe-top) - 95px))}.search-pop .search-item{min-height:48px}.search-pop .si-sub{max-width:34%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-bg{height:var(--visual-height,100dvh);top:var(--visual-top,0px);bottom:auto}.modal{max-height:calc(var(--visual-height,100dvh) - 40px)}.modal-head{flex-shrink:0;gap:12px}.modal-head>div:first-child{min-width:0}.modal-title{overflow-wrap:anywhere}.modal-sub{line-height:1.5}.modal-close{width:44px;height:44px;min-width:44px}.modal-body{overflow-x:hidden;overflow-y:auto}.modal-body>div{min-width:0}.form-actions{position:sticky;bottom:0;background:#fbfaf7;padding-bottom:max(16px,var(--safe-bottom));z-index:30;border-top:1px solid var(--line)}.form-field{min-width:0}.form-field input,.form-field select{min-width:0}.form .form-grid{gap:14px}.btn{min-height:44px}.info-val{overflow-wrap:anywhere}.photo-frame{min-height:160px}.flt-list-row{min-height:56px}.toast{max-width:calc(100vw - 32px);width:max-content;white-space:normal;line-height:1.5;text-align:center;bottom:max(24px,calc(var(--safe-bottom) + 12px))}
+.map-toolbar button{min-height:40px}.map-toolbar{gap:7px}.info-bar[data-filtered=false] .map-filter-status button{display:none}.rp-track{height:28px;margin-top:2px}.rp-btn{min-width:40px;min-height:40px}.rp-btn.small{min-width:36px;min-height:36px}.rp-close{margin-left:auto}.rp-flight{line-height:1.6}.replay-bar{max-width:calc(100% - 24px)}.replay-bar .rp-close{font-size:16px}
 @media(min-width:1400px){.side{width:380px}.map-heading{left:434px}.journal-top h1{font-size:32px}.stat{padding:0 30px}.stat-num{font-size:32px}.replay-bar{left:calc(50% + 190px)}}
-@media(max-width:1200px){header{padding:0 24px;gap:5px}.search-wrap{display:none}.search-toggle{display:flex;align-items:center;justify-content:center;margin-left:8px}.journal-top{padding:23px 27px;gap:22px}.journal-top h1{font-size:23px}.stat{padding:0 15px}.stat-num{font-size:25px}.stat-lbl{font-size:8px}.map-heading h2{font-size:21px}.map-heading{top:75px}.map-toolbar{left:410px;right:auto}.map-note{display:none}}
-@media(max-width:900px) and (min-width:769px){.journal-top{padding:20px 25px}.journal-top h1{font-size:20px}.journal-caption{display:none}.stat{padding:0 11px}.stat-num{font-size:23px}.stat-lbl{font-size:7px}.brand{min-width:190px}.head-btn{padding:10px}.side{width:330px}.map-heading,.map-toolbar{left:375px}.map-heading h2{font-size:19px}.map-legend{gap:10px;font-size:8px}.replay-bar{left:calc(50% + 165px);width:calc(100% - 380px)}}
-@media(max-width:768px){
- header{height:calc(62px + env(safe-area-inset-top,0px));min-height:calc(62px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 18px 0;gap:3px}.brand{min-width:0;gap:8px;margin-right:auto}.brand-mark{width:29px;height:29px;font-size:17px}.brand-name{font-size:13px;letter-spacing:.8px}.brand-name small{font-size:7px;letter-spacing:1.6px;margin-top:3px}.head-btn{padding:9px 7px;font-size:10px;gap:0}.head-btn svg{display:none}.head-btn.primary{margin:0;padding:9px 11px;font-size:11px}.search-toggle{margin:0;min-width:30px;min-height:30px;padding:5px;font-size:12px}.head-menu>.menu-btn{padding:5px;min-width:28px;min-height:30px}.head-btn.ach-nav{display:none}.search-wrap.mobile-open{top:calc(61px + env(safe-area-inset-top,0px))}.search-wrap.mobile-open .search-input{background:#fbfaf7;font-size:14px}.search-wrap.mobile-open .search-pop{width:100%}
- .journal-top{padding:17px 20px 18px;display:block}.journal-top>.journal-intro>.eyebrow{font-size:7px;letter-spacing:1.7px}.journal-top h1{font-size:21px;letter-spacing:1px;margin-top:5px}.journal-caption{display:none}.stats-bar{display:grid!important;grid-template-columns:repeat(5,1fr);margin-top:18px;width:100%;gap:0}.stats-bar .stat:nth-child(n){display:flex}.stat{padding:0 9px;gap:2px;min-width:0}.stat:first-child{padding-left:0}.stat-num{font-size:20px;letter-spacing:-.7px}.stat-lbl{font-size:7px;letter-spacing:.1px}.stat-num span{font-size:8px!important}.stat:nth-child(2) .stat-num{font-size:18px;line-height:24px}
- main{margin:0 8px 8px;border-radius:7px}.side{top:auto;left:0;right:0;bottom:0;width:100%;height:47%;border-radius:14px 14px 0 0;box-shadow:0 -5px 24px #071b2920;padding-bottom:env(safe-area-inset-bottom,0px)}.side-heading{display:none}.side-handle{display:flex;height:18px;min-height:18px;padding-top:3px;align-items:center;justify-content:center}.side-handle span{width:32px;height:3px;background:#bbc9bb}.side.collapsed{height:66px}.tabs{padding:0 14px}.tab{font-size:11px;padding:11px 0 12px}.tab-content{padding:17px 22px}.overview-total .value{font-size:45px}.overview-total{padding-bottom:13px}.passport-grid{padding:12px 16px}.section-label{margin-top:18px}.map-heading{top:22px;left:20px}.map-heading .eyebrow{font-size:8px}.map-heading h2{font-size:20px;margin-top:7px}.map-heading p{font-size:9px;margin-top:6px}.map-toolbar{top:20px;right:16px;left:auto;flex-wrap:wrap;justify-content:flex-end;max-width:130px;gap:4px}.map-toolbar button{padding:7px 8px;font-size:9px;min-height:29px}.map-toolbar .separator{display:none}.map-toolbar .filter-map-btn{display:none}.map-note{display:none}.info-bar{display:none}.leaflet-control-zoom{margin:115px 16px 0!important}.leaflet-control-attribution{max-width:calc(100% - 10px);font-size:6px!important}.modal{height:100dvh;max-height:100dvh;border-radius:0}.modal-bg{padding:0}.modal-head{padding:calc(17px + env(safe-area-inset-top,0px)) 20px 17px}.replay-bar{left:50%;width:calc(100% - 16px);bottom:10px}.rp-flight{font-size:10px}.rp-row{gap:8px}.rp-date{font-size:13px;min-width:82px}
+@media(max-width:1200px){
+ :root{--header-height:64px}header{gap:5px;padding-left:max(20px,var(--safe-left));padding-right:max(20px,var(--safe-right))}.brand{min-width:180px}.head-btn{padding:10px 12px;min-height:44px}.menu-btn{min-width:44px;min-height:44px}.search-wrap{display:none}.search-toggle{display:flex;align-items:center;justify-content:center;margin-left:5px;font-size:20px}.head-btn.primary{min-height:44px}.journal-top{padding:20px 25px;gap:20px}.journal-top h1{font-size:23px}.stat{padding:0 14px}.stat-num{font-size:25px}.stat-lbl{font-size:9px;letter-spacing:.3px}
+ .side{width:320px;left:16px;top:16px;bottom:16px}.side-heading{padding:18px 20px}.map-toolbar{left:360px;right:auto;top:18px}.map-heading{left:360px;top:78px}.map-heading h2{font-size:22px}.map-note{display:none}.replay-bar{left:calc(50% + 160px);width:calc(100% - 380px)}.rp-row{gap:9px}.rp-date{font-size:16px;min-width:98px}.info-bar{right:18px;bottom:20px}.map-legend{font-size:9px}
+ .tabs{overflow-x:auto;scrollbar-width:none;flex-shrink:0}.tab{flex:1 0 44px;min-width:44px}
+ .chip,.sort-chip,.item-info-btn,.ap-action{min-height:40px}.chip,.sort-chip{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;font-size:12px}.chip-row{gap:8px}.item-info-btn{min-width:40px}.item,.ac-item{min-height:60px}.item-name{font-size:14px}.item-sub{font-size:12px}.item-count{font-size:12px}.tab{font-size:12px;padding:14px 0;letter-spacing:0;min-height:46px}.tabs{padding:0 8px}.tab-content{padding:18px 20px}.reset-btn,.text-btn{min-height:36px;display:inline-flex;align-items:center;font-size:12px}.filter-label{font-size:11px}.sort-row{gap:7px}.menu-item{min-height:46px;font-size:13px;padding:10px 13px}.menu-pop{min-width:260px}.form-field input,.form-field select{font-size:16px;min-height:46px}.form-field label{font-size:12px}.form-section-title{font-size:11px}.form-hint{font-size:12px;line-height:1.5}.ac-option{min-height:44px}.flt-no{font-size:12px}.flt-meta,.flt-date{font-size:12px}.info-key{font-size:12px;letter-spacing:0}.info-val{font-size:14px}.back-link{min-height:44px;font-size:12px}.photo-link{font-size:11px;min-height:36px;display:inline-flex;align-items:center}.fleet-meta{padding:11px}.fleet-reg{font-size:13px}.fleet-type{font-size:12px}.fleet-count{font-size:11px}.ach-name{font-size:14px}.ach-desc{font-size:12px}.ach-detail{font-size:11px}.ach-date{font-size:10px}.wrap-lbl{font-size:11px}.wrap-sub{font-size:12px}.wrap-year-chip{min-height:40px;display:inline-flex;align-items:center}.colour-mode .chip{padding:9px 4px;font-size:12px}.log-tools{font-size:13px;gap:12px}.log-tools select{min-height:40px;font-size:13px;padding:7px 12px}.journey-meta{font-size:11px}.journey-no{font-size:12px}.journey-point b{font-size:25px}.journey-point small{font-size:12px}.journey-foot{font-size:11px;line-height:1.5}.journey-card{padding:15px 0}.journey-point{width:105px}
 }
-@media(max-width:768px){header .head-btn:not(.primary) svg{display:block;width:16px;height:16px}header .head-btn.primary span{display:inline}header .head-btn.primary{min-height:34px}header .head-btn:not(.primary){min-height:34px;min-width:28px;justify-content:center}header .head-btn.ach-nav{display:none}}
-@media(max-width:390px){header{padding-left:12px;padding-right:12px}.brand-name{font-size:11px}.head-btn{padding:9px 5px;font-size:9px}.brand-mark{width:25px;height:25px}.stat{padding:0 7px}.stat-num{font-size:18px}.stat:nth-child(2) .stat-num{font-size:16px}.journal-top{padding-left:17px;padding-right:17px}.map-heading h2{font-size:17px}.map-toolbar{max-width:108px}.head-btn.primary{padding:8px;font-size:10px}}
+@media(min-width:768px) and (max-width:1100px){
+ .journal-top h1{font-size:22px}.journal-caption{display:none}.stat{padding:0 11px}.stat-num{font-size:25px}.stat-lbl{font-size:9px}.brand{min-width:170px}.head-btn.ach-nav{display:none}.journal-top{padding:20px 24px}.side{width:316px}.map-toolbar,.map-heading{left:352px}.tabs{gap:1px}.tab{font-size:12px}.replay-bar{left:calc(50% + 158px)}
+}
+@media (max-width:767px), (min-width:768px) and (max-width:1023px) and (orientation:portrait) {
+ :root{--header-height:58px}header{gap:5px;padding-left:max(16px,var(--safe-left));padding-right:max(16px,var(--safe-right));flex-shrink:0}.brand{min-width:0;margin-right:auto;gap:8px}.brand-mark{width:31px;height:31px;font-size:18px}.brand-name{font-size:13px;letter-spacing:.8px}.brand-name small{font-size:7px;letter-spacing:1.5px;margin-top:4px}header>.head-btn:not(.primary){display:none}.head-menu>.menu-btn,.search-toggle{width:44px;height:44px;min-width:44px;margin:0;border:0;background:transparent;border-radius:6px}.search-toggle{font-size:24px}.head-menu>.menu-btn{font-size:17px}.head-btn.primary{margin:0;min-width:44px;height:44px;padding:0 13px;font-size:13px;border-radius:6px;justify-content:center}.head-btn.primary .record-long{display:none}.head-btn.primary .record-short{display:inline}.journal-top{display:block;padding:12px 20px 16px}.journal-intro{display:flex;justify-content:space-between;align-items:center}.journal-intro>.eyebrow{display:none}.journal-top h1{font-size:21px;letter-spacing:1px;margin:0}.journal-caption{display:none}.stats-bar{display:grid!important;grid-template-columns:1fr 1.5fr 1fr 1fr;width:100%;gap:0;margin-top:14px}.stats-bar .stat:nth-child(n){display:flex}.stats-bar .stat:nth-child(3){display:none}.stat{padding:0 12px;align-items:flex-start;min-width:0;gap:4px}.stat:first-child{padding-left:0}.stat-num{font-size:24px;letter-spacing:-.7px;line-height:1.2}.stat:nth-child(2) .stat-num{font-size:24px;line-height:1.2}.stat-lbl{font-size:10px;letter-spacing:0;white-space:nowrap}.stat-num span{font-size:10px!important}
+ main{margin:0 max(8px,var(--safe-right)) max(8px,var(--safe-bottom)) max(8px,var(--safe-left));border-radius:9px;flex:1;min-height:0}body{padding-bottom:0}.map-heading,.map-note{display:none}.map-toolbar{top:12px;left:12px;right:12px;max-width:none;justify-content:flex-start;flex-wrap:nowrap;gap:6px}.map-toolbar button{font-size:12px;padding:10px 13px;min-height:44px;white-space:nowrap}.map-toolbar button:last-child{margin-left:auto}.map-toolbar .separator,.map-toolbar .filter-map-btn{display:none}.leaflet-control-zoom{margin:74px 12px 0!important}.leaflet-control-zoom a{width:38px!important;height:38px!important;line-height:36px!important;margin-bottom:7px!important}.leaflet-control-attribution{font-size:7px!important;bottom:0;max-width:none}
+ .side{top:auto;left:0;right:0;bottom:0;width:100%;height:var(--sheet-height,44%);min-height:0;max-height:calc(100% - 12px);border:0;border-radius:16px 16px 0 0;box-shadow:0 -4px 28px #071b292b;padding-bottom:0;transition:height .26s cubic-bezier(.2,.75,.3,1)}.side.collapsed{height:96px}.side.expanded{height:calc(100% - 12px)}.side-heading{display:none}.sheet-controls{display:flex;align-items:center;gap:4px;padding:0 12px;min-height:50px;flex-shrink:0;background:#fbfaf7;border-bottom:1px solid #eceee7}.sheet-controls button{border:0;background:transparent;color:#597467;font-size:12px;min-width:44px;min-height:44px;padding:0 10px;border-radius:6px}.sheet-controls button:hover{background:#eef2e8}.sheet-controls .side-handle{display:flex;flex:1;align-items:center;justify-content:flex-start;gap:9px;padding:0 4px;height:50px;touch-action:none;cursor:ns-resize;text-align:left}.side-handle>span:first-child{width:23px;height:3px;border-radius:3px;background:#a9bbaa;flex-shrink:0}.side-handle strong{font-size:13px;font-weight:550;letter-spacing:.5px;color:#335749}.side-handle .sheet-hint{display:block;font-size:10px;color:#91a08f;font-weight:400;white-space:nowrap}.sheet-controls #sheetExpand{font-size:12px;min-width:50px;border-left:1px solid #e5eade;border-radius:0}.side.collapsed #mapOnly{visibility:hidden}.side.collapsed .tab-content{visibility:hidden;pointer-events:none}.tabs{display:flex;overflow-x:auto;overflow-y:hidden;flex-shrink:0;min-height:46px;padding:0 10px;gap:0;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{display:flex;align-items:center;justify-content:center;flex:1 0 46px;min-height:46px;min-width:46px;padding:11px 0;font-size:12px;line-height:1.4;letter-spacing:0}.tab.active{background:transparent;text-shadow:none;border-bottom-width:2px}.tab-content{padding:14px 20px 22px;scroll-padding-top:12px}.tab-content[data-view=stats]{display:flex;flex-direction:column}.tab-content[data-view=stats]>.recent-overview{order:0}.tab-content[data-view=stats]>.year-overview{order:1}.tab-content[data-view=stats]>.overview-hero{order:2}.tab-content[data-view=stats]>.detail-toggle{order:3}.side:not(.expanded) .overview-hero,.side:not(.expanded) .year-overview,.side:not(.expanded) .detail-toggle{display:none}.overview-hero{margin-top:20px}.overview-hero>.eyebrow,.overview-total{display:none}.overview-hero .passport-grid{padding:16px}.passport-cell b{font-size:27px}.passport-cell small,.passport-cell p{font-size:12px}.section-label{font-size:13px;letter-spacing:0;margin:12px 0 8px;min-height:30px}.recent-overview>.section-label{margin-top:0}.section-label .text-btn{font-size:11px;min-height:30px}.journey-card{padding:13px 0}.journey-meta{font-size:11px;margin-bottom:7px}.journey-no{font-size:12px}.journey-point b{font-size:25px;font-weight:500;line-height:1.1}.journey-point small{font-size:12px}.journey-point{width:105px;gap:4px}.journey-foot{font-size:11px;margin-top:8px;line-height:1.6}.journey-line::after{font-size:14px}.year-chart{height:88px;gap:7px}.year-col{min-width:0;min-height:44px}.year-axis{font-size:11px;margin-top:8px}.detail-toggle>summary{font-size:13px;min-height:44px;display:flex;align-items:center}.big-stat-lbl{font-size:11px}.big-stat-sub{font-size:12px}.info-bar{display:none;top:68px;left:12px;right:auto;bottom:auto;padding:0 12px;min-height:40px;min-width:0;border-radius:5px;background:#193743e8;max-width:calc(100% - 68px)}.info-bar[data-filtered=true]{display:flex;justify-content:center}.info-bar .map-legend{display:none}.map-filter-status{font-size:11px;gap:12px}.map-filter-status b{font-size:14px}.map-filter-status button{min-height:40px;font-size:12px}.map-filter-status>span:last-child{display:none}
+ .replay-bar{left:50%;bottom:10px;width:calc(100% - 20px);max-width:none;padding:12px 13px 10px;border-radius:9px}.rp-row{display:grid;grid-template-columns:44px 40px minmax(0,1fr) 44px;gap:7px}.rp-date{font-size:17px;min-width:0}.rp-flight{grid-column:1/-1;grid-row:2;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rp-close{grid-row:1;grid-column:4;min-height:44px;min-width:44px;margin:0}.rp-btn{width:44px;height:44px}.rp-btn.small{height:40px;width:40px}.rp-stats{font-size:11px;gap:10px;flex-wrap:wrap;line-height:1.5}.rp-track{height:26px}.rp-date{letter-spacing:0}.replaying .side{opacity:0;pointer-events:none}.replaying .map-toolbar,.replaying .info-bar{display:none}
+ .fleet-grid{gap:12px}.fleet-card{border-radius:7px}.fleet-img{aspect-ratio:1.5}.fleet-reg{font-size:13px}.fleet-type{font-size:12px}.fleet-group-lbl{font-size:12px;letter-spacing:.6px}.fleet-head{display:block}.fleet-title{font-size:13px;letter-spacing:0}.fleet-sub{font-size:12px;margin-top:5px;display:block}.filter-group{margin-bottom:25px}.filter-label{font-size:12px;letter-spacing:0;line-height:1.5}.colour-mode{gap:7px}.chip,.sort-chip{min-height:44px;border-radius:5px;font-size:12px}.filter-group .chip{padding:9px 12px}.sort-row{gap:7px}.sort-chip{padding:8px 11px}.chip-row{gap:8px}.reset-btn{font-size:12px;min-height:40px;display:inline-flex;align-items:center}.item{min-height:64px;padding:12px 3px}.item-name{font-size:14px}.item-sub{font-size:12px}.item-info-btn{min-height:44px;min-width:44px;font-size:14px}.item-count{font-size:12px;min-width:35px;padding:6px}.item-actions{gap:4px}.item-name{overflow-wrap:anywhere}.ac-item{min-height:67px;padding:13px 3px}.sort-row .reset-btn{margin-left:0!important}.log-tools{font-size:13px;margin-bottom:7px}.log-tools select{min-height:44px;font-size:14px}.tab-empty{font-size:13px;line-height:1.8}
+}
+@media(max-width:767px){
+ .modal-bg{padding:0;align-items:stretch}.modal{width:100%;max-width:100%;height:100%;max-height:100%;border:0;border-radius:0}.modal-head{padding:calc(12px + var(--safe-top)) max(16px,var(--safe-right)) 12px max(20px,var(--safe-left));min-height:70px}.modal-title{font-size:18px}.modal-sub{font-size:11px;letter-spacing:.4px}.modal-body{padding-bottom:var(--safe-bottom)}.route-display{padding:25px 12px}.route-iata{font-size:36px;letter-spacing:2px}.route-arrow{margin:0 9px;font-size:21px;vertical-align:6px}.route-iata-stop{font-size:22px;letter-spacing:1px}.route-arrow-stop{margin:0 4px;font-size:15px;vertical-align:8px}.route-city{font-size:12px;letter-spacing:.2px;line-height:1.7}.info-grid{padding:0 20px 15px}.info-row{grid-template-columns:82px minmax(0,1fr);padding:13px 0;gap:8px}.info-key{font-size:12px;letter-spacing:0}.info-val{font-size:14px}.photo-box{padding:0 16px 20px}.photo-title{flex-wrap:wrap;gap:4px;font-size:11px}.photo-frame img{max-height:340px}.form{padding:0 20px 20px}.form-field label{font-size:12px}.form-field input,.form-field select{font-size:16px;min-height:48px;padding:12px}.form-grid,.form-grid.col-3{grid-template-columns:1fr!important}.form-hint{font-size:12px}.form-section-title{font-size:12px;letter-spacing:.5px}.form-actions{display:flex;gap:10px;padding-top:13px}.form-actions .btn{flex:1;min-height:48px;font-size:14px}.flt-list{padding:6px 10px 22px}.flt-list-row{grid-template-columns:51px minmax(0,1fr) auto;gap:9px;padding:12px 7px}.flt-date{font-size:10px}.flt-date b{font-size:12px}.flt-airline{font-size:13px}.flt-meta{font-size:11px;line-height:1.6;overflow-wrap:anywhere}.flt-no{font-size:11px}.flt-mid{min-width:0}.dir-header{padding:12px;margin:0 8px;gap:10px}.dir-iata{font-size:21px}.dir-cities{font-size:11px;margin-left:0}.dir-count{font-size:11px;padding:6px 9px}.dir-route{gap:6px}.wrap-cards{gap:9px}.wrap-card{padding:14px 12px}.wrap-val{font-size:23px}.wrap-lbl{font-size:11px;letter-spacing:.3px}.wrap-hero{padding:18px}.wrap-hero-sub{font-size:13px}.wrap-sub{font-size:12px}.wrap-years{gap:8px}.wrap-year-chip{min-height:44px;min-width:52px;justify-content:center;font-size:14px}.ach-grid{grid-template-columns:1fr 1fr;gap:10px}.ach-card{padding:15px 11px}.ach-name{font-size:13px}.ach-desc{font-size:12px;line-height:1.6;min-height:0}.ach-summary{padding:13px}.ach-detail{font-size:11px}.ach-date{font-size:10px}#achTip{max-width:calc(100vw - 24px);font-size:12px}.back-link{font-size:12px;letter-spacing:0;padding:12px 20px}.menu-pop{min-width:255px;max-width:calc(100vw - 24px)}.menu-item{min-height:48px;font-size:13px}.search-wrap.mobile-open{left:max(8px,var(--safe-left));right:max(8px,var(--safe-right))}
+}
+@media(max-width:374px){
+ header{padding-left:max(10px,var(--safe-left));padding-right:max(10px,var(--safe-right));gap:2px}.brand-name{font-size:11px}.brand-name small{font-size:6px;letter-spacing:1px}.brand-mark{width:27px;height:27px;font-size:17px}.head-btn.primary{width:44px;min-width:44px;padding:0}.head-btn.primary .record-short{font-size:0}.head-btn.primary .record-short::after{content:'+';font-size:24px}.journal-top{padding:10px 16px 14px}.journal-top h1{font-size:20px}.stat{padding:0 9px}.stat-num,.stat:nth-child(2) .stat-num{font-size:21px}.stat-lbl{font-size:9px}.sheet-controls{padding:0 8px}.side-handle .sheet-hint{display:none}.tab-content{padding-left:16px;padding-right:16px}.tabs{padding:0 5px}.tab{min-width:44px;flex-basis:44px}.map-toolbar button{padding:9px 11px}.map-toolbar{gap:5px}.journey-point{width:94px}.info-row{grid-template-columns:72px minmax(0,1fr);gap:6px}.route-iata{font-size:32px}.route-arrow{margin:0 7px}
+}
+@media(min-width:768px) and (max-width:1023px) and (orientation:portrait){
+ :root{--header-height:66px}header{padding-left:24px;padding-right:24px;gap:9px}.brand-name{font-size:17px}.brand-name small{font-size:9px}.brand-mark{height:36px;width:36px}.head-btn.primary{padding:0 17px}.head-btn.primary .record-long{display:inline}.head-btn.primary .record-short{display:none}.journal-top{display:flex;align-items:center;padding:21px 27px;gap:28px}.journal-top h1{font-size:24px;white-space:nowrap}.stats-bar{width:auto;min-width:410px;margin:0;grid-template-columns:1fr 1.4fr .9fr 1fr}.stat-num,.stat:nth-child(2) .stat-num{font-size:27px}.stat-lbl{font-size:10px}.stat{padding:0 17px}.side{height:var(--sheet-height,38%);max-height:calc(100% - 20px);border-radius:16px 16px 0 0}.side.expanded{height:calc(100% - 20px)}.sheet-controls{padding:0 23px;min-height:56px}.sheet-controls .side-handle{height:56px}.side-handle strong{font-size:15px}.side-handle .sheet-hint{font-size:12px}.tabs{padding:0 22px}.tab{font-size:14px;min-height:48px}.side.collapsed{height:104px}.tab-content{padding:18px 28px 28px}.recent-overview .journey-list,.tab-content[data-view=log]>.journey-list{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}.section-label{font-size:14px}.journey-point b{font-size:29px}.journey-point small{font-size:13px}.journey-meta{font-size:12px}.journey-foot{font-size:12px}.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.map-toolbar{top:20px;left:20px;right:20px}.map-toolbar .filter-map-btn{display:block}.map-toolbar button{font-size:13px;padding:11px 17px}.leaflet-control-zoom{margin:88px 20px 0!important}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:42px!important}.info-bar{top:78px;left:20px}.replay-bar{width:calc(100% - 48px);bottom:20px;max-width:760px}.rp-row{grid-template-columns:44px 44px 125px minmax(0,1fr) 44px}.rp-flight{grid-column:4;grid-row:1;font-size:13px}.rp-close{grid-column:5}.modal-bg{padding:28px}.modal{width:min(760px,100%);max-height:calc(var(--visual-height,100dvh) - 56px);border-radius:12px;height:auto}.modal-head{padding:21px 25px}.modal-title{font-size:22px}.modal-sub{font-size:12px}.modal-body{font-size:14px}.form{padding:10px 25px 25px}.form-field input{min-height:48px}.form-field label{font-size:13px}.info-row{grid-template-columns:120px minmax(0,1fr)}.search-wrap.mobile-open{top:calc(var(--header-height) + var(--safe-top) + 7px);left:24px;right:24px}
+}
+@media(max-height:520px) and (max-width:950px) and (orientation:landscape){
+ :root{--header-height:50px}header{height:calc(50px + var(--safe-top));min-height:calc(50px + var(--safe-top));padding-left:max(16px,var(--safe-left));padding-right:max(16px,var(--safe-right));gap:5px}.brand{min-width:0}.brand-name{font-size:12px}.brand-name small{display:none}.brand-mark{height:28px;width:28px}.head-btn{min-height:40px;height:40px;padding:5px 10px}.head-btn.ach-nav{display:none}.head-btn span{display:inline}.head-btn.primary{min-height:40px;height:40px}.menu-btn{min-height:40px}.journal-top{display:none}main{margin:0 max(8px,var(--safe-right)) max(8px,var(--safe-bottom)) max(8px,var(--safe-left));border-radius:8px}.side{left:12px;right:auto;top:12px;bottom:12px;width:290px;height:auto;max-height:none;border-radius:8px;min-height:0;padding:0;opacity:1}.side.expanded,.side.collapsed{height:auto;top:12px;bottom:12px}.sheet-controls{display:none}.side-heading{display:none}.tabs{padding:0 5px;min-height:44px;gap:0}.tab{flex:1 0 43px;font-size:11px;min-height:44px;padding:10px 0}.tab-content{padding:12px 16px}.side.collapsed .tab-content{visibility:visible;pointer-events:auto}.map-toolbar{left:318px;right:12px;top:12px;gap:5px;max-width:none}.map-toolbar button{min-height:40px;font-size:11px;padding:8px 11px}.map-toolbar .filter-map-btn,.map-toolbar .separator{display:none}.map-heading,.map-note,.info-bar{display:none!important}.leaflet-control-zoom{margin:64px 12px 0!important}.leaflet-control-zoom a{height:32px!important;width:32px!important;line-height:30px!important}.overview-hero,.year-overview,.detail-toggle{display:none!important}.section-label{margin:0 0 6px;font-size:12px}.section-label .text-btn{font-size:10px}.journey-card{padding:10px 0}.journey-point b{font-size:22px}.journey-meta,.journey-foot{font-size:10px}.journey-point small{font-size:11px}.journey-point{width:95px}.replay-bar{left:auto;right:12px;transform:translateY(140%);bottom:12px;width:calc(100% - 330px);max-width:none;padding:10px}.replay-bar.on{transform:translateY(0)}.replaying .side{opacity:1;pointer-events:auto}.rp-row{display:grid;grid-template-columns:36px 34px minmax(0,1fr) 36px;gap:6px}.rp-flight{grid-column:1/-1;grid-row:2;font-size:11px}.rp-close{grid-column:4;grid-row:1}.rp-date{font-size:14px;min-width:0}.rp-btn,.rp-btn.small{min-height:34px;min-width:34px;height:34px;width:34px}.rp-stats{font-size:10px;gap:8px}.modal-bg{padding:0;align-items:stretch}.modal{height:100%;max-height:100%;width:100%;border-radius:0;border:0}.modal-head{padding:8px max(20px,var(--safe-right)) 8px max(20px,var(--safe-left));min-height:58px}.modal-close{height:40px;width:40px}.modal-body{padding-bottom:var(--safe-bottom)}.form-grid,.form-grid.col-3{grid-template-columns:1fr 1fr!important}.form-grid.col-1{grid-template-columns:1fr!important}.route-display{padding:17px}.route-iata{font-size:32px}.search-wrap.mobile-open{top:calc(50px + var(--safe-top) + 4px)}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 </style>
@@ -1648,12 +1675,13 @@ main{margin:0 18px 18px;border-radius:10px;min-height:0;background:#132a37;isola
   <button class="head-btn" aria-label="时光机" onclick="openReplay()" title="按时间顺序回放飞行"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/><path d="M3 5v14"/></svg><span>时光机</span></button>
   <button class="head-btn" aria-label="飞行年鉴" onclick="openWrapped()" title="年度飞行总结"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18m4-13h4m-4 4h4"/></svg><span>飞行年鉴</span></button>
   <button class="head-btn ach-nav" onclick="openAchievements()"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="m9 12-2 9 5-3 5 3-2-9"/></svg><span>旅行成就</span></button>
-  <div class="search-wrap" id="searchWrap"><input aria-label="搜索飞行记录" type="search" id="searchInput" class="search-input" placeholder="搜索航班、机场、机型…" autocomplete="off" oninput="doSearch(this.value)" onfocus="doSearch(this.value)" onkeydown="searchKey(event)"><div class="search-pop" id="searchPop"></div></div>
+  <div class="search-wrap" id="searchWrap"><input aria-label="搜索飞行记录" type="search" id="searchInput" class="search-input" placeholder="搜索航班、机场、机型…" autocomplete="off" oninput="doSearch(this.value)" onfocus="doSearch(this.value)" onkeydown="searchKey(event)"><button class="search-close" onclick="closeAtlasSearch()" aria-label="关闭搜索">取消</button><div class="search-pop" id="searchPop"></div></div>
   <button class="menu-btn search-toggle" id="searchToggle" title="搜索" aria-label="打开搜索">⌕</button>
-  <button class="head-btn primary" aria-label="记录飞行" onclick="openForm()"><span>＋ 记录飞行</span></button>
+  <button class="head-btn primary" aria-label="记录飞行" onclick="openForm()"><span class="record-long">＋ 记录飞行</span><span class="record-short">＋ 记录</span></button>
   <div class="head-menu">
-    <button class="menu-btn" onclick="toggleMenu(event)">···</button>
+    <button class="menu-btn" aria-label="更多功能" aria-controls="headerMenu" onclick="toggleMenu(event)">···</button>
     <div class="menu-pop" id="headerMenu">
+      <div class="menu-item" onclick="openReplay()">飞行时光机 <span>↗</span></div><div class="menu-item" onclick="openWrapped()">飞行年鉴 <span>↗</span></div>
       <div class="menu-item" onclick="openAchievements()">旅行成就与徽章</div>
       <div class="menu-item" onclick="exportJson()">下载本地飞行数据 (JSON)<span class="badge" id="localCount">0</span></div>
       <div class="menu-item" onclick="document.getElementById('importInput').click()">导入飞行数据 JSON</div>
@@ -1670,7 +1698,7 @@ main{margin:0 18px 18px;border-radius:10px;min-height:0;background:#132a37;isola
 <main>
   <div id="map"></div>
   <div class="side">
-    <button class="side-handle" id="sideHandle" aria-label="展开或收起记录面板" style="border:0;background:transparent"><span></span></button><div class="side-heading"><div><div class="eyebrow">THE FLIGHT JOURNAL</div><strong>我的飞行手记</strong></div><span class="index">01</span></div>
+    <div class="sheet-controls"><button class="side-handle" id="sideHandle" aria-label="展开或收起飞行手记" aria-controls="tabContent"><span></span><strong>飞行手记</strong><small class="sheet-hint" id="sheetHint">上滑查看更多</small></button><button id="mapOnly" onclick="setSheet('collapsed')" aria-label="收起面板查看地图">看地图</button><button id="sheetExpand" onclick="toggleSheetExpansion()" aria-controls="tabContent">展开 ↑</button></div><div class="side-heading"><div><div class="eyebrow">THE FLIGHT JOURNAL</div><strong>我的飞行手记</strong></div><span class="index">01</span></div>
     <div class="tabs">
       <div class="tab active" data-tab="stats">总览</div>
       <div class="tab" data-tab="log">旅程</div><div class="tab" data-tab="filter">筛选</div>
@@ -2860,6 +2888,7 @@ window.closeModal = closeModal;
 
 function renderTab(){
   const el = $('tabContent');
+  el.dataset.view=activeTab;
   if(activeTab==='stats') el.innerHTML = renderStatsTab();
   else if(activeTab==='log') el.innerHTML = renderLogTab();
   else if(activeTab==='filter') el.innerHTML = renderFilterTab();
@@ -2881,6 +2910,7 @@ document.querySelectorAll('.tab').forEach(t => {
 function renderInfoBar(){
  const flights=visibleFlights();
  const filtering=state.yearSet.size||state.airlines.size||state.aircraft.size||state.airports.size;
+ $('infoBar').dataset.filtered=String(Boolean(filtering));
  $('infoBar').innerHTML=`<div class="map-filter-status"><span><b>${flights.length}</b> / ${F.length} 次飞行</span>${filtering?'<button onclick="resetAtlasFilters()">清除筛选 ×</button>':'<span>全部飞行记录</span>'}</div><div class="map-legend"><span><i></i>机场 · 按到访频次</span><span><span class="legend-line"></span>大圆航线</span></div>`;
  $('allYearsBtn').classList.toggle('on',!state.yearSet.size);
  $('latestYearBtn').classList.toggle('on',state.yearSet.size===1&&state.yearSet.has(maxYear));
@@ -4060,7 +4090,7 @@ function openReplay(){
     kms:0, apSeen:new Set(), ctrySeen:new Set(),
   };
   map.removeLayer(routeLayer); map.removeLayer(airportLayer);
-  $('replayBar').classList.add('on');
+  $('replayBar').classList.add('on');document.body.classList.add('replaying');
   renderReplayBar();
   map.setView([32, 100], Math.max(map.getZoom(), 3), {animate:true});
   setTimeout(() => { if(RP){ rpBeginFlight(); RP.raf = requestAnimationFrame(rpFrame); } }, 500);
@@ -4068,11 +4098,11 @@ function openReplay(){
 function renderReplayBar(){
   $('replayBar').innerHTML = `
     <div class="rp-row">
-      <button class="rp-btn" id="rpPlay" onclick="rpTogglePlay()">${RP && RP.playing ? '❚❚' : '▶'}</button>
-      <button class="rp-btn small" id="rpSpeed" onclick="rpCycleSpeed()">${RP ? RP.speed : 2}×</button>
+      <button class="rp-btn" aria-label="播放或暂停回放" id="rpPlay" onclick="rpTogglePlay()">${RP && RP.playing ? '❚❚' : '▶'}</button>
+      <button class="rp-btn small" aria-label="切换回放速度" id="rpSpeed" onclick="rpCycleSpeed()">${RP ? RP.speed : 2}×</button>
       <div class="rp-date" id="rpDate">—</div>
       <div class="rp-flight" id="rpFlight"></div>
-      <button class="rp-btn small rp-close" onclick="closeReplay()">✕</button>
+      <button class="rp-btn small rp-close" aria-label="关闭回放" onclick="closeReplay()">✕</button>
     </div>
     <div class="rp-track" id="rpTrack" onclick="rpSeekClick(event)">
       <div class="rp-track-line"></div>
@@ -4194,7 +4224,7 @@ function closeReplay(silent){
   if(RP.raf) cancelAnimationFrame(RP.raf);
   map.removeLayer(RP.trail);
   RP = null;
-  $('replayBar').classList.remove('on');
+  $('replayBar').classList.remove('on');document.body.classList.remove('replaying');
   if(!map.hasLayer(airportLayer)) airportLayer.addTo(map);
   if(!map.hasLayer(routeLayer)) routeLayer.addTo(map);
   if(!silent) toast('已退出时光机');
@@ -4202,10 +4232,54 @@ function closeReplay(silent){
 window.openReplay = openReplay; window.closeReplay = closeReplay;
 window.rpTogglePlay = rpTogglePlay; window.rpCycleSpeed = rpCycleSpeed; window.rpSeekClick = rpSeekClick;
 
-// Mobile bottom-sheet toggle
-const _sideEl = document.querySelector('.side');
-$('sideHandle').addEventListener('click', () => _sideEl.classList.toggle('collapsed'));
-document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => _sideEl.classList.remove('collapsed')));
+// The same compact layout covers phones and iPad portrait / Split View.
+const _sideEl=document.querySelector('.side');
+const compactAtlasQuery=window.matchMedia('(max-width:767px), (min-width:768px) and (max-width:1023px) and (orientation:portrait)');
+function isCompactAtlas(){return compactAtlasQuery.matches&&!window.matchMedia('(max-height:520px) and (max-width:950px) and (orientation:landscape)').matches;}
+let sheetMode='half',sheetPointer=null,sheetIgnoreClick=false;
+function setSheet(mode,refit=true){
+ sheetMode=mode;_sideEl.classList.toggle('collapsed',mode==='collapsed');_sideEl.classList.toggle('expanded',mode==='expanded');_sideEl.style.removeProperty('--sheet-height');
+ $('sideHandle').setAttribute('aria-expanded',String(mode!=='collapsed'));$('sheetExpand').setAttribute('aria-expanded',String(mode==='expanded'));
+ $('sheetExpand').textContent=mode==='expanded'?'半屏 ↓':'展开 ↑';$('sheetHint').textContent=mode==='collapsed'?'上滑查看记录':mode==='expanded'?'下滑回到地图':'上滑查看更多';
+ if(refit&&isCompactAtlas()&&!RP){clearTimeout(setSheet.fitTimer);setSheet.fitTimer=setTimeout(()=>{if(sheetMode!=='expanded')fitAtlas();},280);}
+}
+function toggleSheetExpansion(){setSheet(sheetMode==='expanded'?'half':'expanded');}
+const handle=$('sideHandle');
+handle.addEventListener('click',()=>{if(sheetIgnoreClick){sheetIgnoreClick=false;return;}setSheet(sheetMode==='collapsed'?'half':'collapsed');});
+handle.addEventListener('pointerdown',e=>{
+ if(!isCompactAtlas()||e.button>0)return;
+ sheetPointer={id:e.pointerId,y:e.clientY,height:_sideEl.getBoundingClientRect().height,mode:sheetMode,moved:false};
+ handle.setPointerCapture(e.pointerId);
+});
+handle.addEventListener('pointermove',e=>{
+ if(!sheetPointer||e.pointerId!==sheetPointer.id)return;
+ const delta=sheetPointer.y-e.clientY;if(Math.abs(delta)<6&&!sheetPointer.moved)return;
+ sheetPointer.moved=true;_sideEl.classList.add('dragging');_sideEl.classList.remove('collapsed','expanded');
+ const parent=_sideEl.parentElement.clientHeight,max=parent-12,min=96;
+ _sideEl.style.setProperty('--sheet-height',Math.max(min,Math.min(max,sheetPointer.height+delta))+'px');
+});
+function finishSheetDrag(e){
+ if(!sheetPointer||e.pointerId!==sheetPointer.id)return;
+ const moved=sheetPointer.moved,delta=sheetPointer.y-e.clientY,oldMode=sheetPointer.mode;
+ const height=_sideEl.getBoundingClientRect().height,parent=_sideEl.parentElement.clientHeight;sheetPointer=null;_sideEl.classList.remove('dragging');
+ if(!moved)return;sheetIgnoreClick=true;
+ let mode=height<parent*.29?'collapsed':height>parent*.68?'expanded':'half';
+ if(Math.abs(delta)>55){const modes=['collapsed','half','expanded'];mode=modes[Math.max(0,Math.min(2,modes.indexOf(oldMode)+(delta>0?1:-1)))];}
+ setSheet(mode);setTimeout(()=>{sheetIgnoreClick=false;},400);
+}
+handle.addEventListener('pointerup',finishSheetDrag);
+handle.addEventListener('pointercancel',()=>{sheetPointer=null;_sideEl.classList.remove('dragging');setSheet(sheetMode,false);});
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{if(isCompactAtlas())setSheet(t.dataset.tab==='stats'?'half':'expanded',false);}));
+function closeAtlasSearch(){ $('searchWrap').classList.remove('mobile-open');$('searchPop').classList.remove('on');$('searchInput').blur(); }
+window.closeAtlasSearch=closeAtlasSearch;window.setSheet=setSheet;window.toggleSheetExpansion=toggleSheetExpansion;
+let atlasResizeTimer=null;
+function resizeAtlas(){
+ clearTimeout(atlasResizeTimer);atlasResizeTimer=setTimeout(()=>{map.invalidateSize();if(isCompactAtlas())setSheet(sheetMode,false);if(!RP&&sheetMode!=='expanded')fitAtlas();},160);
+}
+window.addEventListener('resize',resizeAtlas);compactAtlasQuery.addEventListener('change',()=>{setSheet('half',false);resizeAtlas();});
+function syncVisualViewport(){const v=window.visualViewport;document.documentElement.style.setProperty('--visual-height',(v?v.height:window.innerHeight)+'px');document.documentElement.style.setProperty('--visual-top',(v?v.offsetTop:0)+'px');}
+syncVisualViewport();window.visualViewport?.addEventListener('resize',syncVisualViewport);window.visualViewport?.addEventListener('scroll',syncVisualViewport);window.addEventListener('resize',syncVisualViewport);
+setSheet(window.matchMedia('(max-width:767px) and (max-height:700px) and (orientation:portrait)').matches?'collapsed':'half',false);
 
 // PWA service worker (仅线上环境注册,本地预览不缓存)
 if('serviceWorker' in navigator && location.protocol === 'https:'){
@@ -4233,18 +4307,18 @@ function renderStatsTab(){
  const totalKm=flights.reduce((s,f)=>s+(f.km||0),0),totalHr=flights.reduce((s,f)=>s+(f.sec||0),0)/3600;
  const byYear={};F.forEach(f=>{const y=yearOf(f);if(y)byYear[y]=(byYear[y]||0)+1;});
  const years=Object.keys(byYear).map(Number).sort((a,b)=>a-b),peak=Math.max(...Object.values(byYear));
- return `<div class="eyebrow" style="font-size:8px;letter-spacing:1.8px;margin-bottom:11px">${state.yearSet.size?'SELECTED FLIGHTS':'A LIFETIME IN THE AIR'}</div>
+ return `<div class="overview-hero"><div class="eyebrow" style="font-size:8px;letter-spacing:1.8px;margin-bottom:11px">${state.yearSet.size?'SELECTED FLIGHTS':'A LIFETIME IN THE AIR'}</div>
  <div class="overview-total"><div class="value">${flights.length}<small>次飞行</small></div><div class="period">Since ${minYear}<br>Enjoy the air.</div></div>
  <div class="passport-grid"><div class="passport-cell"><b>${(totalKm/40075).toFixed(1)}</b><small>圈地球</small><p>${fmt(Math.round(totalKm))} km 的足迹</p></div><div class="passport-cell"><b>${(totalHr/24).toFixed(1)}</b><small>天在云端</small><p>${fmt(Math.round(totalHr))} 小时的飞行</p></div></div>
- <div class="section-label"><span>飞过的这些年</span><button class="text-btn" onclick="setAtlasYear(null)">${state.yearSet.size?'查看全部年份 ↗':'点击年份探索'}</button></div>
+ </div><section class="year-overview"><div class="section-label"><span>飞过的这些年</span><button class="text-btn" onclick="setAtlasYear(null)">${state.yearSet.size?'查看全部年份 ↗':'点击年份探索'}</button></div>
  <div class="year-chart">${years.map(y=>`<button class="year-col ${state.yearSet.has(y)?'on':''}" title="${y} · ${byYear[y]} 次飞行" aria-label="筛选 ${y} 年，${byYear[y]} 次飞行" onclick="setAtlasYear(${y})"><span class="bar" style="height:${Math.max(4,byYear[y]/peak*100)}%"></span><span class="bar-n">${byYear[y]}</span></button>`).join('')}</div><div class="year-axis"><span>${minYear}</span><span>${Math.round((minYear+maxYear)/2)}</span><span>${maxYear}</span></div>
- <div class="section-label"><span>最近的旅程</span><button class="text-btn" onclick="activateTab('log')">查看全部 ${flights.length} 程 ↗</button></div>
+ </section><section class="recent-overview"><div class="section-label"><span>最近的旅程</span><button class="text-btn" onclick="activateTab('log')">查看全部 ${flights.length} 程 ↗</button></div>
  <div class="journey-list">${flights.slice(0,4).map(flightCard).join('')}</div>
- <details class="detail-toggle"><summary>更多飞行统计与里程碑</summary>${renderDetailedStats()}</details>`;
+ </section><details class="detail-toggle"><summary>更多飞行统计与里程碑</summary>${renderDetailedStats()}</details>`;
 }
 function activateTab(name){
  activeTab=name;document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t.dataset.tab===name);t.setAttribute('aria-selected',String(t.dataset.tab===name));});
- document.querySelector('.side').classList.remove('collapsed');renderTab();$('tabContent').scrollTop=0;
+ if(isCompactAtlas())setSheet(name==='stats'?'half':'expanded',false);renderTab();$('tabContent').scrollTop=0;
 }
 function setAtlasYear(y){state.yearSet.clear();if(y!=null)state.yearSet.add(y);update();}
 function resetAtlasFilters(){state.yearSet.clear();state.airlines.clear();state.aircraft.clear();state.airports.clear();update();}
@@ -4252,9 +4326,15 @@ function fitAtlas(){
  const points=[];visibleFlights().forEach(f=>[f.depI,f.arrI,f.stopI].forEach(ic=>{if(A[ic])points.push([A[ic].lat,A[ic].lng]);}));
  if(!points.length)return toast('当前没有可显示的航线');
  map.invalidateSize();
- const mobile=window.innerWidth<=768;
- map.fitBounds(points,{paddingTopLeft:mobile?[30,105]:[410,105],paddingBottomRight:mobile?[30,Math.round($('map').clientHeight*0.48)+20]:[40,80],maxZoom:6,animate:false});
+ if(isCompactAtlas()&&document.querySelector('.side').classList.contains('expanded'))setSheet('half',false);
+ const frame=$('map').getBoundingClientRect(),side=document.querySelector('.side').getBoundingClientRect(),toolbar=document.querySelector('.map-toolbar').getBoundingClientRect();
+ const bottomSheet=isCompactAtlas();
+ const left=bottomSheet?20:Math.min(side.right-frame.left+25,frame.width*.55);
+ const top=bottomSheet?Math.max(75,toolbar.bottom-frame.top+18):100;
+ const bottom=bottomSheet?Math.min(side.height+20,frame.height*.63):65;
+ map.fitBounds(points,{paddingTopLeft:[left,top],paddingBottomRight:[25,bottom],maxZoom:6,animate:false});
 }
+
 window.activateTab=activateTab;window.setAtlasYear=setAtlasYear;window.resetAtlasFilters=resetAtlasFilters;window.fitAtlas=fitAtlas;
 // Give the existing dynamic tab views a keyboard equivalent to pointer selection.
 document.querySelector('.tabs').setAttribute('role','tablist');
@@ -4263,7 +4343,7 @@ document.querySelectorAll('.tab').forEach(t=>{
  t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t.click();}else if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const ts=[...document.querySelectorAll('.tab')];ts[(ts.indexOf(t)+(e.key==='ArrowRight'?1:-1)+ts.length)%ts.length].focus();}});
  t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',String(x===t)));$('tabContent').scrollTop=0;});
 });
-window.addEventListener('resize',()=>map.invalidateSize());
+
 // Accessible names on the original modal close controls and keyboard focus restoration.
 let modalReturnFocus=null;
 const modalObserver=new MutationObserver(records=>{
@@ -4285,6 +4365,8 @@ document.addEventListener('keydown',e=>{
  if(!bg.contains(document.activeElement)){e.preventDefault();first.focus();}else if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
 });
 
+document.querySelectorAll('.menu-item').forEach(el=>{el.tabIndex=0;el.setAttribute('role','button');el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}});el.addEventListener('click',()=>$('headerMenu').classList.remove('on'));});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAtlasSearch();});
 // Boot
 update();
 requestAnimationFrame(fitAtlas);
